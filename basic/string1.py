@@ -84,7 +84,13 @@ def fix_start(s):
 # Assume a and b are length 2 or more.
 def mix_up(a, b):
     # +++your code here+++
-    return
+    a_fist_letters = a[0:2]
+    a_end_of_the_words = a[2:]
+
+    b_fist_letters = b[0:2]
+    b_end_of_the_words = b[2:]
+
+    return ((b_fist_letters + a_end_of_the_words) +' '+ (a_fist_letters + b_end_of_the_words))
 
 
 # Provided simple test() function used in main() to print
