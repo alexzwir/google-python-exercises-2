@@ -68,31 +68,10 @@ def both_ends(s):
 # Hint: s.replace(stra, strb) returns a version of string s
 # where all instances of stra have been replaced by strb.
 def fix_start(s):
-    l=list(s)
-    print(l)
-
-    l_sem_primeira_posicao = l[1:]
-    print(l_sem_primeira_posicao)
-
-    first_l = l[0]
-    print(first_l)
-
-    for c in l_sem_primeira_posicao:
-        if(c != first_l):
-            print(c, first_l,'não é igual')
-            return c
-        else:
-            print(c,first_l,'é igual')
-            c = '*'
-            print(c,first_l,'é igual')
-            return c
-
-    return l_sem_primeira_posicao
-
-
-
-
-
+    target = s[0]
+    s_minus_first_letter = s[1:]
+    s_new = s_minus_first_letter.replace(target,'*')
+    return target + s_new
 
 
 
